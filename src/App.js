@@ -1,8 +1,13 @@
+import React from 'react';
+import Home from './pages/Home';
+import './App.css';
+import Template from './templates';
+
 function App() {
   return (
-    <div className="App">
-      <h1>Hello World</h1>
-    </div>
+    <Template>
+      <Home />
+    </Template>
   );
 }
 
