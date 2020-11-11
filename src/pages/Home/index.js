@@ -12,9 +12,14 @@ const Home = () => {
   const [tasks, setTasks] = useState([]);
 
   const handleClick = () => {
-    const newTask = value;
+    const newTask = { id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1, value };
 
     setTasks([...tasks, newTask]);
+  };
+
+  const handleRemove = (taskId) => {
+    const updatedTasks = tasks.filter((t) => t.id !== taskId);
+    setTasks(updatedTasks);
   };
 
   return (
@@ -26,7 +31,12 @@ const Home = () => {
         </Button>
       </SearchBar>
       <Content>
-        { !tasks.length ? <NoContent /> : <TaskList tasks={tasks} />}
+        { !tasks.length ? <NoContent /> : (
+          <TaskList
+            tasks={tasks}
+            removeTask={(task) => handleRemove(task)}
+          />
+        )}
       </Content>
     </Container>
   );
