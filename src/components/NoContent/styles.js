@@ -1,16 +1,17 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  width: 352px;
+  height: 280px;
+
   display: flex;
   justify-content: center;
   align-items: center;
 
-  width: 100vw;
-  height: 100vh;
+  background: #F2F2F2;
+  border: 1px dashed #CCCCCC;
 
-  & p, span {
-    font-family: 'Roboto';
-    font-weight: 400;
-    color: #606060;
+  & p {
+    font-size: 12px;
   }
 `;

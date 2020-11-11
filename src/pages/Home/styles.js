@@ -18,3 +18,9 @@ export const SearchBar = styled.div`
     margin-right: 16px;
   }
 `;
+
+export const Content = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+`;
